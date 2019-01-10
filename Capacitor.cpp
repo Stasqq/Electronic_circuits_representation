@@ -4,6 +4,13 @@
 
 #include "Capacitor.h"
 
+Capacitor::Capacitor(double c, Node *prev, Node *next) {
+    capacitance=c;
+    eleType=elementType::Capacitor;
+    prevNode=prev;
+    nextNode=next;
+}
+
 double Capacitor::getCapacitance() const {
     return capacitance;
 }

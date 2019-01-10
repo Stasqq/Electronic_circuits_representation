@@ -5,12 +5,13 @@
 #ifndef PROI_3RD_RESISTOR_H
 #define PROI_3RD_RESISTOR_H
 
+#include "Element.h"
 
-class Resistor {
+class Resistor : public Element {
 private:
     double resistance;
 public:
-    explicit Resistor(double r) { resistance=r; };
+    explicit Resistor(double r, Node* prev, Node* next);
 
     double getResistance() const;
 

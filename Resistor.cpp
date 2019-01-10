@@ -4,6 +4,13 @@
 
 #include "Resistor.h"
 
+Resistor::Resistor(double r, Node* prev, Node* next) {
+    resistance=r;
+    eleType=elementType::Resistor;
+    prevNode=prev;
+    nextNode=next;
+}
+
 double Resistor::getResistance() const {
     return resistance;
 }
