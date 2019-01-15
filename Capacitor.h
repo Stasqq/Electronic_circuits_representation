@@ -13,7 +13,7 @@ private:
 public:
     explicit Capacitor(double c, Node* prev, Node* next);
 
-    double getCapacitance() const;
+    double getValue() override;
 
     void setCapacitance(double capacitance);
 };

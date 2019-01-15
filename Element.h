@@ -7,7 +7,7 @@
 
 #include "Node.h"
 
-enum elementType{Resistor=1,Capacitor=2,VoltageSource=3};
+enum elementType{Res=1,Cap=2,Vol=3};
 
 class Element {
 protected:
@@ -15,7 +15,20 @@ protected:
     Node* prevNode;
     Node* nextNode;
 public:
-    Element() = default;
+    elementType getEleType() const;
+
+    void setEleType(elementType eleType);
+
+    Node *getPrevNode() const;
+
+    void setPrevNode(Node *prevNode);
+
+    Node *getNextNode() const;
+
+    void setNextNode(Node *nextNode);
+
+    virtual double getValue() = 0;
+
 };
 
 

@@ -13,7 +13,7 @@ private:
 public:
     VoltageSource(double v, Node* prev, Node* next);
 
-    double getVoltage() const;
+    double getValue() override;
 
     void setVoltage(double voltage);
 };

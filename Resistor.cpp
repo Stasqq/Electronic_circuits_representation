@@ -6,12 +6,12 @@
 
 Resistor::Resistor(double r, Node* prev, Node* next) {
     resistance=r;
-    eleType=elementType::Resistor;
+    eleType=elementType::Res;
     prevNode=prev;
     nextNode=next;
 }
 
-double Resistor::getResistance() const {
+double Resistor::getValue(){
     return resistance;
 }
 

@@ -5,14 +5,22 @@
 #ifndef PROI_3RD_NODE_H
 #define PROI_3RD_NODE_H
 
-#include "Element.h"
 
 class Node {
 private:
-    vector<Element*> input;
-    vector<Element*> output;
+    int nrElementIn;
+    int nrElementOut;
 public:
+    Node();
+    Node(int in, int out){ nrElementIn=in; nrElementOut=out; }
 
+    int getNrElementIn() const;
+
+    void setNrElementIn(int nrElementIn);
+
+    int getNrElementOut() const;
+
+    void setNrElementOut(int nrElementOut);;
 };
 
 

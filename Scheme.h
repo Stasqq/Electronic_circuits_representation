@@ -6,13 +6,25 @@
 #define PROI_3RD_SCHEME_H
 
 #include "Element.h"
+#include <vector>
+#include "Node.h"
+#include "VoltageSource.h"
+#include "Capacitor.h"
+#include "Resistor.h"
+
+using namespace std;
 
 class Scheme {
 private:
-    Node* firstNode;
-    Node* lastNode;
+    vector<Node> nodes;
+    vector<Element*> elements;
 public:
     Scheme();
+
+    void addNode(int nrElementIn, int nrElementOut);
+    void addResistor(double resistance);
+
+    double calculateResistance();
 };
 
 

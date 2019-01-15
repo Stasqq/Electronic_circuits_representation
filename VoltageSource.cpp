@@ -6,12 +6,12 @@
 
 VoltageSource::VoltageSource(double v, Node *prev, Node *next) {
     voltage=v;
-    eleType=elementType::VoltageSource;
+    eleType=elementType::Vol;
     prevNode=prev;
     nextNode=next;
 }
 
-double VoltageSource::getVoltage() const {
+double VoltageSource::getValue(){
     return voltage;
 }
 

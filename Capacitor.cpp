@@ -6,13 +6,13 @@
 
 Capacitor::Capacitor(double c, Node *prev, Node *next) {
     capacitance=c;
-    eleType=elementType::Capacitor;
+    eleType=elementType::Cap;
     prevNode=prev;
     nextNode=next;
 }
 
-double Capacitor::getCapacitance() const {
-    return capacitance;
+double Capacitor::getValue() {
+    return Capacitor::capacitance;
 }
 
 void Capacitor::setCapacitance(double capacitance) {

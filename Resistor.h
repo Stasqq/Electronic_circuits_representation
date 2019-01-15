@@ -13,7 +13,7 @@ private:
 public:
     explicit Resistor(double r, Node* prev, Node* next);
 
-    double getResistance() const;
+    double getValue() override;
 
     void setResistance(double resistance);
 };
