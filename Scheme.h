@@ -6,6 +6,7 @@
 #define PROI_3RD_SCHEME_H
 
 #include "Element.h"
+#include <iostream>
 #include <vector>
 #include "Node.h"
 #include "VoltageSource.h"
@@ -14,17 +15,28 @@
 
 using namespace std;
 
-class Scheme {
+class Scheme : public Element{
 private:
     vector<Node> nodes;
     vector<Element*> elements;
 public:
-    Scheme();
+    Scheme() {eleType=Bra;};
 
-    void addNode(int nrElementIn, int nrElementOut);
-    void addResistor(double resistance);
+    Node* addNode(int nrElementIn, int nrElementOut);
+
+    Node* addNode(int nrElementIn, int nrElementOut1, int nrElementOut2);
+
+    Resistor* addResistor(double resistance);
+
+    Capacitor* addCapacitor(double capacity);
+
+    Scheme* addScheme(Scheme& s);
 
     double calculateResistance();
+
+    double calculateCapitance();
+
+    double getValue() override;
 };
 
 

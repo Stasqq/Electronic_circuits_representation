@@ -4,11 +4,9 @@
 
 #include "Capacitor.h"
 
-Capacitor::Capacitor(double c, Node *prev, Node *next) {
+Capacitor::Capacitor(double c) {
     capacitance=c;
     eleType=elementType::Cap;
-    prevNode=prev;
-    nextNode=next;
 }
 
 double Capacitor::getValue() {

@@ -4,11 +4,9 @@
 
 #include "Resistor.h"
 
-Resistor::Resistor(double r, Node* prev, Node* next) {
+Resistor::Resistor(double r) {
     resistance=r;
     eleType=elementType::Res;
-    prevNode=prev;
-    nextNode=next;
 }
 
 double Resistor::getValue(){

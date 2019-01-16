@@ -11,7 +11,7 @@ class Capacitor : public Element {
 private:
     double capacitance;
 public:
-    explicit Capacitor(double c, Node* prev, Node* next);
+    explicit Capacitor(double c);
 
     double getValue() override;
 

@@ -4,11 +4,9 @@
 
 #include "VoltageSource.h"
 
-VoltageSource::VoltageSource(double v, Node *prev, Node *next) {
+VoltageSource::VoltageSource(double v) {
     voltage=v;
     eleType=elementType::Vol;
-    prevNode=prev;
-    nextNode=next;
 }
 
 double VoltageSource::getValue(){

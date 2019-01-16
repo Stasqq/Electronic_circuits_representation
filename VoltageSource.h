@@ -11,7 +11,7 @@ class VoltageSource : public Element {
 private:
     double voltage;
 public:
-    VoltageSource(double v, Node* prev, Node* next);
+    VoltageSource(double v);
 
     double getValue() override;
 

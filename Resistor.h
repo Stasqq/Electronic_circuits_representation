@@ -11,7 +11,7 @@ class Resistor : public Element {
 private:
     double resistance;
 public:
-    explicit Resistor(double r, Node* prev, Node* next);
+    explicit Resistor(double r);
 
     double getValue() override;
 

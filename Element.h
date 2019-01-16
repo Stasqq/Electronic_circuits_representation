@@ -7,25 +7,13 @@
 
 #include "Node.h"
 
-enum elementType{Res=1,Cap=2,Vol=3};
+enum elementType{Bra=0,Res=1,Cap=2,Vol=3};
 
 class Element {
 protected:
     enum elementType eleType;
-    Node* prevNode;
-    Node* nextNode;
 public:
     elementType getEleType() const;
-
-    void setEleType(elementType eleType);
-
-    Node *getPrevNode() const;
-
-    void setPrevNode(Node *prevNode);
-
-    Node *getNextNode() const;
-
-    void setNextNode(Node *nextNode);
 
     virtual double getValue() = 0;
 
