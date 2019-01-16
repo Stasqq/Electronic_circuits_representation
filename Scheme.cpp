@@ -4,46 +4,54 @@
 
 #include "Scheme.h"
 
+//Scheme witch voltageSource
 Scheme::Scheme(double voltage) {
-    eleType = Bra;
-    addVoltageSource(voltage);
+    eleType = Sch;
+    addElement(Vol,voltage);
 }
 
+//add new node for serial connection
 Node *Scheme::addNode(int nrElementIn, int nrElementOut) {
     Node *N = new Node(nrElementIn, nrElementOut);
     nodes.push_back(*N);
     return N;
 }
 
+//add new node for parallel connection
 Node *Scheme::addNode(int nrElementIn, int nrElementOut1, int nrElementOut2) {
     Node *N = new Node(nrElementIn, nrElementOut1, nrElementOut2);
     nodes.push_back(*N);
     return N;
 }
 
-Resistor *Scheme::addResistor(double resistance) {
-    Resistor *R = new Resistor(resistance);
-    elements.push_back(R);
-    return R;
+//add element of some type
+Element* Scheme::addElement(elementType type, double value) {
+    Element* e;
+    switch(type){
+        case Res:{
+            e = new Resistor(value);
+        }break;
+
+        case Cap:{
+            e = new Capacitor(value);
+        }break;
+
+        case Vol:{
+            e = new VoltageSource(value);
+        }break;
+    }
+    elements.push_back(e);
+    return e;
 }
 
-Capacitor *Scheme::addCapacitor(double capacity) {
-    Capacitor *C = new Capacitor(capacity);
-    elements.push_back(C);
-    return C;
-}
-
-VoltageSource *Scheme::addVoltageSource(double voltage) {
-    VoltageSource *V = new VoltageSource(voltage);
-    elements.push_back(V);
-    return V;
-}
-
+//add new scheme to actual scheme
 Scheme *Scheme::addScheme(Scheme &s) {
     elements.push_back(&s);
     return &s;
 }
 
+//calculate amperager
+//voltage is only from 1st element voltagesource
 double Scheme::calculateAmperage() {
     double output, resistance, voltage;
     resistance = calculateResistance();
@@ -52,6 +60,7 @@ double Scheme::calculateAmperage() {
     return output;
 }
 
+//calculating resistance, by walking by nodes and their elements, it has some recursion, when element is class scheme
 double Scheme::calculateResistance() {
     double output = 0;
     int type, i = nodes.size();
@@ -101,6 +110,7 @@ double Scheme::calculateResistance() {
     return output;
 }
 
+//calculating capitance, same like resistance, but it have different pattern
 double Scheme::calculateCapitance() {
     double output = 0;
     int type, i = nodes.size();
@@ -176,6 +186,7 @@ double Scheme::calculateCapitance() {
     return output;
 }
 
+//overriding virtual function of element, because Scheme need to be subclass of Element
 double Scheme::getValue() {
     return -1;
 }

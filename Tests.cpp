@@ -9,7 +9,7 @@ bool Tests::runTests() {
 
 bool Tests::amperageTest() {
     Scheme S=Scheme(100);  //scheme with voltage source 100
-    S.addResistor(20);  //resistor 20
+    S.addElement(Res,20);  //resistor 20
     S.addNode(-1,0);
     S.addNode(0,1);
     S.addNode(1,-2);
@@ -27,17 +27,17 @@ bool Tests::capacityTest() {
     Scheme S;
     Scheme S2;
 
-    S2.addCapacitor(10);
-    S2.addCapacitor(10);
+    S2.addElement(Cap,10);
+    S2.addElement(Cap,10);
     S2.addNode(-1,0);
     S2.addNode(0,1);
     S2.addNode(1,-2);
     //scheme with 2 capacitors each 10, both 5
 
-    S.addCapacitor(20);
+    S.addElement(Cap,20);
     //1st capacitor
 
-    S.addCapacitor(15);
+    S.addElement(Cap,15);
     S.addScheme(S2);
     S.addNode(-1,0);
     S.addNode(0,1,2);
@@ -55,9 +55,9 @@ bool Tests::capacityTest() {
 bool Tests::resistanceTest() {
     Scheme S;
     Scheme rowno1,rowno2;
-    rowno1.addResistor(10);
-    rowno1.addResistor(20);
-    rowno1.addResistor(20);
+    rowno1.addElement(Res,10);
+    rowno1.addElement(Res,20);
+    rowno1.addElement(Res,20);
     rowno1.addNode(-1,0);
     rowno1.addNode(0,1,2);
     rowno1.addNode(1,-2);
@@ -66,12 +66,12 @@ bool Tests::resistanceTest() {
     //       \20
     //rowno1 = 10+10=20
 
-    rowno2.addResistor(20);
+    rowno2.addElement(Res,20);
     rowno2.addNode(-1,0);
     rowno2.addNode(0,-2);
     //rowno2 = 20
 
-    S.addResistor(10);
+    S.addElement(Res,10);
     S.addNode(-1,0);
     S.addScheme(rowno1);
     S.addScheme(rowno2);

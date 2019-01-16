@@ -15,12 +15,35 @@
 
 using namespace std;
 
+/*
+ * Using tips:
+ * when you want to add some new element to scheme you should:
+ * 1. add(Resistor/Scheme/Capacitor)
+ * 2. addNode(x,ElementNumber) //it's node which connect your new element with scheme
+ *
+ * if it's 1st element
+ * 2. addNode(-1,0)
+ *
+ * if its's last element
+ * 3. addNode(x,-2)
+ *
+ * when you need some parallel connection
+ * 1. add 2 elements
+ * 2. addNode(element number befor parallel connection, 1st element number, 2nd element number)
+ *
+ *
+ * Warning!
+ * Scheme have some recursion elements, so big scheme calculating can take a moment
+ * Program operate only on 2-way parallel connections
+ */
+
+
 class Scheme : public Element {
 private:
     vector<Node> nodes;
     vector<Element *> elements;
 public:
-    Scheme() { eleType = Bra; };
+    Scheme() { eleType = Sch; };
 
     Scheme(double voltage);
 
@@ -28,13 +51,9 @@ public:
 
     Node *addNode(int nrElementIn, int nrElementOut1, int nrElementOut2);
 
-    Resistor *addResistor(double resistance);
-
-    Capacitor *addCapacitor(double capacity);
+    Element* addElement(elementType type, double value);
 
     Scheme *addScheme(Scheme &s);
-
-    VoltageSource *addVoltageSource(double voltage);
 
     double calculateAmperage();
 
