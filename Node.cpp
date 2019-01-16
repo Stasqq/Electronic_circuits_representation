@@ -4,8 +4,8 @@
 
 #include "Node.h"
 
-Node::Node(int in, int out1, int out2){
-    nrElementIn=in;
+Node::Node(int in, int out1, int out2) {
+    nrElementIn = in;
     nrElementOut.push_back(out1);
     nrElementOut.push_back(out2);
 }
@@ -18,10 +18,10 @@ void Node::setNrElementIn(int nrElementIn) {
     Node::nrElementIn = nrElementIn;
 }
 
-int Node::getOutNumber(){
+int Node::getOutNumber() {
     return nrElementOut.size();
 }
 
-int Node::getNrElementOut(int nr){
+int Node::getNrElementOut(int nr) {
     return nrElementOut[nr];
 }

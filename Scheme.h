@@ -15,26 +15,36 @@
 
 using namespace std;
 
-class Scheme : public Element{
+class Scheme : public Element {
 private:
     vector<Node> nodes;
-    vector<Element*> elements;
+    vector<Element *> elements;
 public:
-    Scheme() {eleType=Bra;};
+    Scheme() { eleType = Bra; };
 
-    Node* addNode(int nrElementIn, int nrElementOut);
+    Scheme(double voltage);
 
-    Node* addNode(int nrElementIn, int nrElementOut1, int nrElementOut2);
+    Node *addNode(int nrElementIn, int nrElementOut);
 
-    Resistor* addResistor(double resistance);
+    Node *addNode(int nrElementIn, int nrElementOut1, int nrElementOut2);
 
-    Capacitor* addCapacitor(double capacity);
+    Resistor *addResistor(double resistance);
 
-    Scheme* addScheme(Scheme& s);
+    Capacitor *addCapacitor(double capacity);
+
+    Scheme *addScheme(Scheme &s);
+
+    VoltageSource *addVoltageSource(double voltage);
+
+    double calculateAmperage();
 
     double calculateResistance();
 
     double calculateCapitance();
+
+    int getElementsSize() { return elements.size(); }
+
+    Element *getElement(int eleNumber) { return elements[eleNumber]; }
 
     double getValue() override;
 };

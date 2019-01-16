@@ -5,11 +5,11 @@
 #include "VoltageSource.h"
 
 VoltageSource::VoltageSource(double v) {
-    voltage=v;
-    eleType=elementType::Vol;
+    voltage = v;
+    eleType = elementType::Vol;
 }
 
-double VoltageSource::getValue(){
+double VoltageSource::getValue() {
     return voltage;
 }
 

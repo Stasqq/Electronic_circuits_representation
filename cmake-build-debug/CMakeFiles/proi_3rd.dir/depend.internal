@@ -26,6 +26,15 @@ CMakeFiles/proi_3rd.dir/Scheme.cpp.obj
  C:/Users/Stasiek/Desktop/proi_3rd/Scheme.cpp
  C:/Users/Stasiek/Desktop/proi_3rd/Scheme.h
  C:/Users/Stasiek/Desktop/proi_3rd/VoltageSource.h
+CMakeFiles/proi_3rd.dir/Tests.cpp.obj
+ C:/Users/Stasiek/Desktop/proi_3rd/Capacitor.h
+ C:/Users/Stasiek/Desktop/proi_3rd/Element.h
+ C:/Users/Stasiek/Desktop/proi_3rd/Node.h
+ C:/Users/Stasiek/Desktop/proi_3rd/Resistor.h
+ C:/Users/Stasiek/Desktop/proi_3rd/Scheme.h
+ C:/Users/Stasiek/Desktop/proi_3rd/Tests.cpp
+ C:/Users/Stasiek/Desktop/proi_3rd/Tests.h
+ C:/Users/Stasiek/Desktop/proi_3rd/VoltageSource.h
 CMakeFiles/proi_3rd.dir/VoltageSource.cpp.obj
  C:/Users/Stasiek/Desktop/proi_3rd/Element.h
  C:/Users/Stasiek/Desktop/proi_3rd/Node.h
@@ -37,5 +46,6 @@ CMakeFiles/proi_3rd.dir/main.cpp.obj
  C:/Users/Stasiek/Desktop/proi_3rd/Node.h
  C:/Users/Stasiek/Desktop/proi_3rd/Resistor.h
  C:/Users/Stasiek/Desktop/proi_3rd/Scheme.h
+ C:/Users/Stasiek/Desktop/proi_3rd/Tests.h
  C:/Users/Stasiek/Desktop/proi_3rd/VoltageSource.h
  C:/Users/Stasiek/Desktop/proi_3rd/main.cpp

@@ -5,8 +5,8 @@
 #include "Capacitor.h"
 
 Capacitor::Capacitor(double c) {
-    capacitance=c;
-    eleType=elementType::Cap;
+    capacitance = c;
+    eleType = elementType::Cap;
 }
 
 double Capacitor::getValue() {

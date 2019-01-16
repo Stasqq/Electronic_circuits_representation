@@ -257,6 +257,33 @@ Scheme.cpp.s:
 	$(MAKE) -f CMakeFiles\proi_3rd.dir\build.make CMakeFiles/proi_3rd.dir/Scheme.cpp.s
 .PHONY : Scheme.cpp.s
 
+Tests.obj: Tests.cpp.obj
+
+.PHONY : Tests.obj
+
+# target to build an object file
+Tests.cpp.obj:
+	$(MAKE) -f CMakeFiles\proi_3rd.dir\build.make CMakeFiles/proi_3rd.dir/Tests.cpp.obj
+.PHONY : Tests.cpp.obj
+
+Tests.i: Tests.cpp.i
+
+.PHONY : Tests.i
+
+# target to preprocess a source file
+Tests.cpp.i:
+	$(MAKE) -f CMakeFiles\proi_3rd.dir\build.make CMakeFiles/proi_3rd.dir/Tests.cpp.i
+.PHONY : Tests.cpp.i
+
+Tests.s: Tests.cpp.s
+
+.PHONY : Tests.s
+
+# target to generate assembly for a file
+Tests.cpp.s:
+	$(MAKE) -f CMakeFiles\proi_3rd.dir\build.make CMakeFiles/proi_3rd.dir/Tests.cpp.s
+.PHONY : Tests.cpp.s
+
 VoltageSource.obj: VoltageSource.cpp.obj
 
 .PHONY : VoltageSource.obj
@@ -335,6 +362,9 @@ help:
 	@echo ... Scheme.obj
 	@echo ... Scheme.i
 	@echo ... Scheme.s
+	@echo ... Tests.obj
+	@echo ... Tests.i
+	@echo ... Tests.s
 	@echo ... VoltageSource.obj
 	@echo ... VoltageSource.i
 	@echo ... VoltageSource.s

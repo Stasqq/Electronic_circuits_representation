@@ -7,7 +7,9 @@
 
 #include "Node.h"
 
-enum elementType{Bra=0,Res=1,Cap=2,Vol=3};
+enum elementType {
+    Bra = 0, Res = 1, Cap = 2, Vol = 3
+};
 
 class Element {
 protected:

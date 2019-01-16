@@ -12,7 +12,10 @@ private:
     int nrElementIn;
     std::vector<int> nrElementOut;
 public:
-    Node(int in, int out){ nrElementIn=in; nrElementOut.push_back(out); }
+    Node(int in, int out) {
+        nrElementIn = in;
+        nrElementOut.push_back(out);
+    }
 
     Node(int in, int out1, int out2);
 

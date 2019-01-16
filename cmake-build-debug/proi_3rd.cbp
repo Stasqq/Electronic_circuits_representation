@@ -110,6 +110,12 @@
 		<Unit filename="C:/Users/Stasiek/Desktop/proi_3rd/Scheme.h">
 			<Option target="proi_3rd"/>
 		</Unit>
+		<Unit filename="C:/Users/Stasiek/Desktop/proi_3rd/Tests.cpp">
+			<Option target="proi_3rd"/>
+		</Unit>
+		<Unit filename="C:/Users/Stasiek/Desktop/proi_3rd/Tests.h">
+			<Option target="proi_3rd"/>
+		</Unit>
 		<Unit filename="C:/Users/Stasiek/Desktop/proi_3rd/VoltageSource.cpp">
 			<Option target="proi_3rd"/>
 		</Unit>

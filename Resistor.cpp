@@ -5,11 +5,11 @@
 #include "Resistor.h"
 
 Resistor::Resistor(double r) {
-    resistance=r;
-    eleType=elementType::Res;
+    resistance = r;
+    eleType = elementType::Res;
 }
 
-double Resistor::getValue(){
+double Resistor::getValue() {
     return resistance;
 }
 

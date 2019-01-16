@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/proi_3rd.dir/Element.cpp.obj"
   "CMakeFiles/proi_3rd.dir/VoltageSource.cpp.obj"
   "CMakeFiles/proi_3rd.dir/Scheme.cpp.obj"
+  "CMakeFiles/proi_3rd.dir/Tests.cpp.obj"
   "proi_3rd.pdb"
   "proi_3rd.exe"
   "proi_3rd.exe.manifest"

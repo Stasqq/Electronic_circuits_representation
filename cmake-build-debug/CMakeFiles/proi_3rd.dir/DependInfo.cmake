@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Stasiek/Desktop/proi_3rd/Node.cpp" "C:/Users/Stasiek/Desktop/proi_3rd/cmake-build-debug/CMakeFiles/proi_3rd.dir/Node.cpp.obj"
   "C:/Users/Stasiek/Desktop/proi_3rd/Resistor.cpp" "C:/Users/Stasiek/Desktop/proi_3rd/cmake-build-debug/CMakeFiles/proi_3rd.dir/Resistor.cpp.obj"
   "C:/Users/Stasiek/Desktop/proi_3rd/Scheme.cpp" "C:/Users/Stasiek/Desktop/proi_3rd/cmake-build-debug/CMakeFiles/proi_3rd.dir/Scheme.cpp.obj"
+  "C:/Users/Stasiek/Desktop/proi_3rd/Tests.cpp" "C:/Users/Stasiek/Desktop/proi_3rd/cmake-build-debug/CMakeFiles/proi_3rd.dir/Tests.cpp.obj"
   "C:/Users/Stasiek/Desktop/proi_3rd/VoltageSource.cpp" "C:/Users/Stasiek/Desktop/proi_3rd/cmake-build-debug/CMakeFiles/proi_3rd.dir/VoltageSource.cpp.obj"
   "C:/Users/Stasiek/Desktop/proi_3rd/main.cpp" "C:/Users/Stasiek/Desktop/proi_3rd/cmake-build-debug/CMakeFiles/proi_3rd.dir/main.cpp.obj"
   )
